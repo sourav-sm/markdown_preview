@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+  }
+
+  #editor {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 20px;
+  }
+  
+  #code-part{
+    padding: 0%;
+    width: 50%;
+    height: 100%;
+    overflow: auto;    
+  }
+  /* Container to divide left and right parts */
+  body > div {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Optional styling for code part */
+  body > div:first-child {
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+  }
+  
+  /* Optional styling for preview part */
+  body > div:last-child {
+    background-color: #ffffff;
+  }
+  
+  /* Styling the input */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
