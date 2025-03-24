@@ -3,8 +3,21 @@ const editor= document.getElementById('editor');
 const reset=document.getElementById('Reset');
 
 
-//initial render
-preview.innerHTML=marked.parse(editor.value);
+// Configure marked
+marked.setOptions({
+    breaks: true,
+    gfm: true,
+    sanitize: false, // Set to true for more security
+    headerIds: false,
+    smartLists: true,
+    highlight: function(code, lang) {
+      return hljs.highlightAuto(code).value;
+    }
+  });
+
+
+// initial render
+preview.innerHTML=marked.parse(editor.value || '');
 
 editor.addEventListener('input', ()=>{
     const markdownText=editor.value;
